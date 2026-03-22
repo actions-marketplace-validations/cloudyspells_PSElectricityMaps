@@ -32,7 +32,7 @@ jobs:
         run: |
           cp ./main/docs/wiki-src/*.md ./wiki/
       - name: Login to Az PowerShell Module
-        uses: azure/login@v1
+        uses: azure/login@v3
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
           enable-AzPSSession: true

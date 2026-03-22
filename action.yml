@@ -6,7 +6,7 @@ branding:
   color: 'green'
 inputs:
   azure_credential:
-    description: Azure credential secret for azure/login@v1 action
+    description: Azure credential secret for azure/login@v3 action
     required: true
   regions:
     description: Comma seperated list of Azure regions to check for current emissions
@@ -26,7 +26,7 @@ runs:
   using: composite
   steps:
     - id: azurelogin
-      uses: azure/login@v1
+      uses: azure/login@v3
       with:
         creds: ${{ inputs.azure_credential }}
         enable-AzPSSession: true
